@@ -42,6 +42,9 @@ frontend-install:
 		echo "⚠️  No package.json found in frontend/"; \
 	fi
 
+frontend-run:
+	cd frontend && npm install && npm run dev
+
 frontend-dev:
 	@if [ ! -d "frontend" ]; then \
 		echo "❌ Frontend directory not found. Merge frontend branch first."; \
@@ -62,20 +65,10 @@ frontend-build:
 	fi
 
 # Run full stack (backend + frontend)
-dev: backend-install
+dev: backend-run-api frontend-run
 	@echo "🚀 Starting full stack development servers..."
 	@echo "   Backend API will run on http://localhost:5000"
-	@if [ -d "frontend" ]; then \
-		echo "   Frontend will run on http://localhost:3000"; \
-		echo ""; \
-		echo "Press Ctrl+C to stop both servers"; \
-		trap 'kill 0' INT; \
-		cd backend && $(PY) main.py --serve & \
-		make frontend-dev & \
-		wait; \
-	else \
-		echo "   Frontend not merged yet - running backend only"; \
-		cd backend && $(PY) main.py --serve; \
-	fi
+	@echo "	  Frontend will run on http://localhost:5173"
+	frontend-run
 
 run-all: dev
