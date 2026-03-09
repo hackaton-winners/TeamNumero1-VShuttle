@@ -8,12 +8,16 @@ type WarningProps = {
   message?: string
   subMessage?: string
   countdownFrom?: number
+  onOverride?: () => void
+  onStop?: () => void
 }
 
 export function Warning({
   message = "STOP",
   subMessage = "Operazione interrotta",
   countdownFrom = 10,
+  onOverride,
+  onStop,
 }: WarningProps) {
   const safeStart = Math.max(0, Math.floor(countdownFrom))
   const totalMs = safeStart * 1000
@@ -80,10 +84,10 @@ export function Warning({
             </p>
 
             <div className="flex justify-center gap-2 pt-8">
-              <Button size={"lg"} className="bg-success">
+              <Button size={"lg"} className="bg-success" onClick={onOverride}>
                 Prosegui
               </Button>
-              <Button size={"lg"} className="bg-destructive">
+              <Button size={"lg"} className="bg-destructive" onClick={onStop}>
                 Arresta
               </Button>
             </div>
