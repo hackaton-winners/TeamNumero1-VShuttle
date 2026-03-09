@@ -22,8 +22,8 @@ make backend-clean
 
 Notes:
 - The virtual environment is created at .venv in the repository root.
-- Backend dependencies are read from backend/src_gian/requirements.txt.
-- Development dependencies are read from backend/src_gian/requirements-dev.txt.
+- Backend dependencies are read from backend/requirements.txt.
+- Development dependencies are read from backend/requirements-dev.txt.
 
 ## Frontend <-> Backend Communication
 

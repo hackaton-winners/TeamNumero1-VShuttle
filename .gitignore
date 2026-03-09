@@ -32,7 +32,7 @@ Thumbs.db
 .idea/
 
 # Backend generated outputs
-backend/src_gian/data/output.json
+backend/data/output.json
 
 # Local environment overrides (keep project .env if tracked)
 .env.local

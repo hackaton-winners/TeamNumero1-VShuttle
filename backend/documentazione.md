@@ -17,11 +17,11 @@ laterale = 0.25
 
 
 
-backend/src_gian
+backend/
 │
-├── .env                  ← configurazione: pesi IVW, soglie, path JSON
-│
-├── main.py               ← entry point (batch e live polling)
+├── requirements.txt      ← dipendenze runtime (Flask, Flask-CORS)
+├── requirements-dev.txt  ← dipendenze dev (pytest)
+├── main.py               ← entry point (batch e API Flask)
 │
 ├── data/
 │   ├── input.json        ← scenari di input da processare
