@@ -148,7 +148,11 @@ check("ZTL + eccezione → GO",          r.action == "GO")
 
 r = decide(mkm(has_restriction=True, restriction_active=True, has_exception=True,
                matched_restriction="ZTL", matched_exception="ECCETTO NAVETTE"), 0.40, "ZTL ECCETTO NAVETTE")
-check("ZTL + eccezione bassa conf → GO (sempre)", r.action == "GO")
+check("ZTL + eccezione sotto THRESHOLD_UNCERTAIN (0.40) -> HUMAN_CONFIRM", r.action == "HUMAN_CONFIRM")
+
+r = decide(mkm(has_restriction=True, restriction_active=True, has_exception=True,
+               matched_restriction="ZTL", matched_exception="ECCETTO NAVETTE"), 0.60, "ZTL ECCETTO NAVETTE")
+check("ZTL + eccezione zona grigia (0.60) -> GO (sopra soglia rumore)", r.action == "GO")
 
 r = decide(mkm(has_restriction=True, restriction_active=False,
                matched_restriction="ZTL", time_window=(7, 20)), 0.92, "ZTL ORARIO 7-20")
