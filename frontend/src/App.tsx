@@ -162,6 +162,7 @@ export function App() {
         <Stop
           message="FRENATA D'EMERGENZA"
           subMessage="Tempo scaduto — arresto automatico"
+          confidence={confidencePercent}
         />
       </div>
     )
@@ -171,13 +172,18 @@ export function App() {
     <div className="h-svh w-screen p-4">
       {scenario.action === "GO" && <Ongoing confidence={confidencePercent} />}
       {scenario.action === "STOP" && (
-        <Stop message="NON PUOI PROSEGUIRE" subMessage={scenario.reason} />
+        <Stop
+          message="NON PUOI PROSEGUIRE"
+          subMessage={scenario.reason}
+          confidence={confidencePercent}
+        />
       )}
       {scenario.action === "HUMAN_CONFIRM" && (
         <Warning
           message="ATTENZIONE"
           subMessage={scenario.reason}
           countdownFrom={2}
+          confidence={confidencePercent}
           onOverride={() => handleHumanDecision(true)}
           onStop={() => handleHumanDecision(false)}
         />

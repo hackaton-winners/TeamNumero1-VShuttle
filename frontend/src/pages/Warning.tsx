@@ -8,6 +8,7 @@ type WarningProps = {
   message?: string
   subMessage?: string
   countdownFrom?: number
+  confidence?: number
   onOverride?: () => void
   onStop?: () => void
 }
@@ -16,6 +17,7 @@ export function Warning({
   message = "STOP",
   subMessage = "Operazione interrotta",
   countdownFrom = 10,
+  confidence = 0,
   onOverride,
   onStop,
 }: WarningProps) {
@@ -60,17 +62,34 @@ export function Warning({
       <div className="mx-auto flex h-full w-full flex-col">
         <div className="relative w-full pt-2">
           <Slider
-            aria-label="Tempo rimanente"
+            aria-label="Livello di confidence"
             className="w-full"
             trackClassName="h-16 rounded-md"
             rangeClassName="bg-warning"
+            max={100}
+            step={1}
+            value={[confidence]}
+            disabled
+            showThumb={false}
+          />
+          <p className="pointer-events-none absolute inset-0 flex items-center justify-center text-2xl font-bold text-foreground">
+            Confidence: {confidence}%
+          </p>
+        </div>
+
+        <div className="relative mt-4 w-full">
+          <Slider
+            aria-label="Tempo rimanente"
+            className="w-full"
+            trackClassName="h-10 rounded-md"
+            rangeClassName="bg-warning/60"
             max={100}
             step={0.001}
             value={[roundedProgress]}
             disabled
             showThumb={false}
           />
-          <p className="pointer-events-none absolute inset-0 flex items-center justify-center text-2xl font-bold text-foreground">
+          <p className="pointer-events-none absolute inset-0 flex items-center justify-center text-lg font-bold text-foreground">
             {secondsLeft}s rimanenti
           </p>
         </div>

@@ -10,20 +10,20 @@ export function Ongoing({ confidence = 70 }: OngoingProps) {
   return (
     <div className="h-full w-full p-6">
       <div className="mx-auto flex h-full w-full flex-col gap-12">
-        <div className="pt-2">
-          {/* <div className="flex items-center justify-between text-sm">
-            <span className="text-muted-foreground">Livello di confidence</span>
-            <span className="font-medium">{confidence}%</span>
-          </div> */}
+        <div className="relative w-full pt-2">
           <Slider
             aria-label="Livello di confidence"
             className="w-full"
+            trackClassName="h-16 rounded-md"
             max={100}
             step={1}
             value={[confidence]}
             disabled
             showThumb={false}
           />
+          <p className="pointer-events-none absolute inset-0 flex items-center justify-center text-2xl font-bold text-foreground">
+            Confidence: {confidence}%
+          </p>
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center gap-3 text-center">
