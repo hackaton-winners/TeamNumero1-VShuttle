@@ -1,11 +1,4 @@
-# Getting started
-### Option 1: Single command (recommended)
-
-```bash
-make dev
-```
-
-### Option 2: Separate terminals
+### How to run: Separate terminals
 
 Terminal 1 (Backend):
 ```bash
@@ -14,7 +7,7 @@ make backend-run-api
 
 Terminal 2 (Frontend):
 ```bash
-make frontend-dev
+make frontend-run
 ```
 
 # V-Shuttle dashboard and parsing solution
