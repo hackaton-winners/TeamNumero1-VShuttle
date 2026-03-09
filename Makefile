@@ -4,8 +4,8 @@
 
 VENV_DIR := .venv
 PYTHON := python3
-PIP := $(VENV_DIR)/bin/pip
-PY := $(VENV_DIR)/bin/python
+PIP := $(CURDIR)/$(VENV_DIR)/bin/pip
+PY := $(CURDIR)/$(VENV_DIR)/bin/python
 
 # Detect if frontend exists
 FRONTEND_EXISTS := $(shell [ -d frontend ] && echo 1 || echo 0)
