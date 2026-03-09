@@ -1,4 +1,4 @@
-### How to run: Separate terminals
+### How to run:
 
 Terminal 1 (Backend):
 ```bash
