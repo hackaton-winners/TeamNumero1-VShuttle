@@ -60,7 +60,10 @@ Sul backend, abbiamo implementato una logica **deterministica** (nessuna chiamat
 
 ## Demo Live
 
-![Demo in azione](./media/LiveDemo_(iPad-Pro).gif?raw=true)  
+<div align="center">
+<img src="./media/LiveDemo_(iPad-Pro).gif?raw=true" alt="Demo in azione" width="600"/>
+</div>
+
 *Esempio del flusso automatico con passaggio scenari ogni 4 secondi e gestione del timeout.*
 
 ---
@@ -212,7 +215,7 @@ V-Shuttle
 
 ## Test e Stress Test Finale
 
-Il sistema è stato progettato per gestire senza crash i **30 scenari segreti** forniti a T-10 minuti dalla fine dell’hackathon. L’algoritmo deterministico e la pulizia delle stringhe garantiscono robustezza anche in presenza di errori OCR complessi.
+Il sistema è stato progettato per gestire senza crash i **30 scenari segreti** forniti a 30 minuti dalla fine dell’hackathon. L’algoritmo deterministico e la pulizia delle stringhe garantiscono robustezza anche in presenza di errori OCR complessi.
 
 ---
 
