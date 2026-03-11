@@ -60,7 +60,7 @@ Sul backend, abbiamo implementato una logica **deterministica** (nessuna chiamat
 
 ## Demo Live
 
-![Demo in azione](./media/LiveDemo_(iPad%20Pro).gif?raw=true)  
+![Demo in azione](./media/LiveDemo_(iPad-Pro).gif?raw=true)  
 *Esempio del flusso automatico con passaggio scenari ogni 4 secondi e gestione del timeout.*
 
 ---
