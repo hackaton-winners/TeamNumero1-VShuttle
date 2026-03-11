@@ -220,4 +220,4 @@ Il sistema è stato progettato per gestire senza crash i **30 scenari segreti** 
 ---
 
 **Grazie per l’attenzione!**  
-*TeamNumero1 – Hastega Hackathon 2025*
+*TeamNumero1 – Hastega Hackathon 2026*
