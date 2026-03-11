@@ -39,22 +39,22 @@ Sul backend, abbiamo implementato una logica **deterministica** (nessuna chiamat
 <div align="center">
 
 ### Avvio Simulazione
-<img src="./media/AvvioSimulazione_(iPad%20Pro).png?raw=true" alt="Avvio Simulazione" width="600"/>
+<img src="./media/AvvioSimulazione_(iPad Pro).png?raw=true" alt="Avvio Simulazione" width="600"/>
 
 <br/>
 
 ### Richiesta di Intervento (timer 2s)
-<img src="./media/RichiestaIntervento_(iPad%20Pro).png?raw=true" alt="Richiesta Intervento" width="600"/>
+<img src="./media/RichiestaIntervento_(iPad Pro).png?raw=true" alt="Richiesta Intervento" width="600"/>
 
 <br/>
 
 ### Azione GO — Confidenza Alta
-<img src="./media/AzioneGo_(iPad%20Pro).png?raw=true" alt="Azione GO" width="600"/>
+<img src="./media/AzioneGo_(iPad Pro).png?raw=true" alt="Azione GO" width="600"/>
 
 <br/>
 
 ### Azione STOP — Motivazione Chiara
-<img src="./media/AzioneStop_(iPad%20Pro).png?raw=true" alt="Azione STOP" width="600"/>
+<img src="./media/AzioneStop_(iPad Pro).png?raw=true" alt="Azione STOP" width="600"/>
 
 </div>
 
